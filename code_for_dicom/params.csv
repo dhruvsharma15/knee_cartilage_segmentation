@@ -1,0 +1,15 @@
+verbose,False
+out_dir,/media/naditya/data2/knee_mri/dhruv/Project/code_dhruv/code_for_dicom
+N,20000
+refract_val,40.0
+max_length,depend
+rms_cease,0
+target,None
+multiprocessing,1
+max_depth,256
+index_type,linear
+step_size,1000
+use_edges,False
+diff_type,0
+progress_images,False
+multiple_passes,None

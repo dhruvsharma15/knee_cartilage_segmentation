@@ -1,0 +1,13 @@
+file='../../knee_data/03370000/coronal/10116301';
+[path, name, ext]=fileparts(file);
+img=dicomread(file);
+new_png=dcm2png(img);
+
+png_path='../../../raytransform/pyirt-1.0/pyirt/D/';
+imwrite(new_png,fullfile(png_path,sprintf(strcat(name,('.png')))));
+%running commands on terminal
+command=strcat('cd ../../../raytransform/pyirt-1.0/pyirt/D/irt ; ',strcat(' python run_irt.py -p params1.csv ../',strcat(name,('.png'))));
+system(command)
+
+irt_result=fullfile('../../../raytransform/pyirt-1.0/pyirt/',strcat(name,('irt.png')));
+imshow(
